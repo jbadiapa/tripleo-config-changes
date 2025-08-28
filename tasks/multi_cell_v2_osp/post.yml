@@ -4,7 +4,6 @@
   tasks:
     - name: validate the deployment success
       shell: |
-         sleep 20
          source ~/stackrc
          openstack overcloud status --plan cell1 | grep "DEPLOY_SUCCESS"
       register: status
